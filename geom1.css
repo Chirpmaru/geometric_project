@@ -1,0 +1,162 @@
+body{
+    margin: 0;
+    background-color: rgb(20, 20, 20);
+}
+
+
+/*GRID*/
+
+.maingrid{
+    display: grid;
+    grid-template-columns: 384px 1fr 1fr 1fr 384px; 
+    grid-template-rows: 319px 319px 319px;
+    grid-template-areas: 
+                        "specialborder1 grid1 grid2 grid3 border1"
+                        "border2 grid4 grid5 grid6 border3"
+                        "border4 grid7 grid8 grid9 specialborder2";
+}
+
+.border1{
+    grid-area: "border1";
+}
+.border2{
+    grid-area: "border2";
+    border-width: 0px 4px 0px 0px;
+    border-radius:5%;
+    border-style: solid;
+    border-color: rgb(56, 56, 56);
+}
+.border3{
+    grid-area: "border3";
+    border-width: 0px 0px 0px 4px;
+    border-radius:5%;
+    border-style: solid;
+    border-color: rgb(56, 56, 56);
+}
+.border4{
+    grid-area: "border4";
+}
+.specialborder1{
+    grid-area: "specialborder1";
+}
+.specialborder2{
+    grid-area: "specialborder2";
+}
+.grid1{
+    grid-area: "grid1";
+    background-color: rgb(18, 18, 18);
+}
+.grid2{
+    grid-area: "grid2";
+    background-color: rgb(18, 18, 18);
+}
+.grid3{
+    grid-area: "grid3";
+    background-color: rgb(18, 18, 18);
+}
+.grid4{
+    grid-area: "grid4";
+    background-color: rgb(18, 18, 18);
+}
+.grid5{
+    grid-area: "grid5";
+    background-color: rgb(18, 18, 18);
+}
+.grid6{
+    grid-area: "grid6";
+    background-color: rgb(18, 18, 18);
+}
+.grid7{
+    grid-area: "grid7";
+    background-color: rgb(18, 18, 18);
+}
+.grid8{
+    grid-area: "grid8";
+    background-color: rgb(18, 18, 18);
+}
+.grid9{
+    grid-area: "grid9";
+    background-color: rgb(18, 18, 18);
+}
+
+
+/*GRID END*/
+
+/*FLEX*/
+
+.grid1, .grid5, .grid9{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*FLEX END*/
+
+/*Tryed to center something in movement, help*/
+
+.decalagecontentgrid1{
+    position: relative;
+    margin-bottom: 45%;
+    margin-right: 45%;
+    
+}
+.decalagecontentgrid5{
+    position: relative;
+    margin-bottom: 40%;
+    margin-right: 45%;
+}
+.decalagecontentgrid9{
+    position: relative;
+    margin-bottom: 50%;
+    margin-right: 45%;
+}
+
+
+      
+
+@media(max-width: 1690px)
+{
+    .maingrid{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 319px 319px 319px;
+        grid-template-areas: 
+            "grid1 grid2 grid3"
+            "grid4 grid5 grid6"
+            "grid7 grid8 grid9";
+    }
+
+
+    .border1, .border2, .border3, .border4, 
+    .specialborder1, .specialborder2{
+        display: none;
+    }
+    
+}
+@media(max-width: 992px)
+{
+    .maingrid{
+        grid-auto-flow: column;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: 189px 189px 189px;
+        grid-template-rows: 240px 240px 240px;
+        grid-template-areas: 
+                            "grid1"
+                            "grid5"
+                            "grid9";
+    }
+
+
+    .border1, .border2, .border3, .border4, 
+    .specialborder1, .specialborder2, .grid2, 
+    .grid3, .grid4, .grid6, .grid7, .grid8{
+        display: none;
+    }
+
+    .decalagecontentgrid1{
+        position: relative;
+        margin-bottom: 120px;
+        margin-right: 45%;
+        
+    }
+}
